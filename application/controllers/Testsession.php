@@ -15,7 +15,9 @@ class Testsession extends CI_Controller {
 
 		$this->session->set_userdata($newdata);
 
-		$this->load->view('welcome_message');
+		$data['sess_save_path'] = $this->config->item('sess_save_path');
+
+		$this->load->view('welcome_message', $data);
 	}
 
 	public function remove()

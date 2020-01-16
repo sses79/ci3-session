@@ -78,6 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Session Data</h1>
 
 	<div id="body">
+		<p><code><?php if(isset($sess_save_path) && $sess_save_path) echo $sess_save_path;?></code></p>
 		<p><code><?php echo json_encode($_SESSION); ?></code></p>
 	</div>
 
